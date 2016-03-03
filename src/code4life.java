@@ -17,15 +17,30 @@ public class code4life {
 	 * 
 	 * 3. If it's more than 5, play the Batman theme song.
 	 */
-
+    
 	public static void main(String[] args) {
-		playBatmanTheme();
-		String xa  = JOptionPane.showMessageDialog(null, "How many hours have you spent coding this week?");
+
+		String x  = JOptionPane.showInputDialog(null, "How many hours have you spent coding this week?");
+   int i =  Integer.parseInt(x);
+    
+		if( i>= 5){
+			playBatmanTheme();
+	}
+		else if( i <= 1){
+			System.out.println("You must stop watching YouTube and start coding.");
+			
+		}
+		else if(i>= 4){
 		
+			System.out.println("You're a coding Ninja!!!!!!!!!!!!!!!!!!");
+		}
+		else{
+			
+			System.out.println("You are not a Ninja and don't watch too much YouTube. Keep coding for a few more hours to get a reward.");
+		}
 		
 		
 	}
-
 	
 	
 	private static void playBatmanTheme() {
